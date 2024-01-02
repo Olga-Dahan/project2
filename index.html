@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="assets/js/jquery-3.7.1.js"></script>
+    <script src="assets/js/main.js" type="module"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="parallax"></div>
+    <h1>Cryptocurrency</h1>
+    <div class="parallax"></div>
+    <hr>
+    <div id="popupWin" class="modalWin">
+
+        <p>You selected too many coins</p>
+        <hr>
+        <p>To add the "<span id="insertNameOfCoin"></span>" coin, you must unselect another coin:</p>
+        <div class="progress progress-bar-striped progress-bar-animated"  
+            id="progress-" style="height: 10px;  width: 0px" ></div>
+        <div id="popupCoins"></div>
+        <hr>
+        <button id="staySameCoinsButton">Stay with the same coins</button>
+
+    </div>
+    
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                type="button" role="tab" aria-controls="home-taariab-pane" aria-selected="true">Home</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="selected-tab" data-bs-toggle="tab" data-bs-target="#selected-tab-pane"
+                type="button" role="tab" aria-controls="selected-tab-pane" aria-selected="false">Selected Coins</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="liveReports-tab" data-bs-toggle="tab" data-bs-target="#liveReports-tab-pane"
+                type="button" role="tab" aria-controls="liveReports-tab-pane" aria-selected="false">Live
+                Reports</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about-tab-pane" type="button"
+                role="tab" aria-controls="about-tab-pane" aria-selected="false">About</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <input type="text" id="searchInput" placeholder="symbol of cryptocurrency">
+            <button class="nav-link" id="search-tab" data-bs-toggle="tab" data-bs-target="#search-tab-pane"
+                type="button" role="tab" aria-controls="search-tab-pane" aria-selected="false"  >Search</button>
+        </li>
+    </ul>
+
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+            tabindex="0">
+
+            <div class="row" id="coins-container"></div>
+
+        </div>
+        <div class="tab-pane fade" id="selected-tab-pane" role="tabpanel" aria-labelledby="selected-tab" tabindex="0">
+
+            <div class="row" id="selected-coins-container"></div>
+
+        </div>
+        <div class="tab-pane fade" id="liveReports-tab-pane" role="tabpanel" aria-labelledby="liveReports-tab"
+            tabindex="0">
+            reports
+        </div>
+        <div class="tab-pane fade" id="about-tab-pane" role="tabpanel" aria-labelledby="about-tab" tabindex="0">
+        </div>
+        <div class="tab-pane fade show active" id="search-tab-pane" role="tabpanel" aria-labelledby="search-tab"
+            tabindex="0">
+
+            <div class="row" id="search-container"></div>
+
+        </div>
+        <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+            ...
+        </div>
+
+    </div>
+
+</body>
+
+</html>
